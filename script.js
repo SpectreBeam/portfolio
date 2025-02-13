@@ -1,6 +1,18 @@
-// Add interactivity (optional)
+// Dark/Light Mode Toggle
+const modeToggle = document.getElementById('mode-toggle');
+modeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    
+    // Toggle icon between light and dark
+    if (document.body.classList.contains('light-mode')) {
+        modeToggle.innerText = '🌙';  // Dark Mode
+    } else {
+        modeToggle.innerText = '☀️';  // Light Mode
+    }
+});
+
+// Add smooth scrolling to sections
 document.addEventListener('DOMContentLoaded', () => {
-    // Example: Add a simple scroll effect when navigating
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
         link.addEventListener('click', e => {
